@@ -7,7 +7,7 @@ class Aluno:
         self.notas = notas
 
     def aprovado(self):
-        return self.notas >= 6
+        return self.notas >= 7
     
 # aqui vamos criar a lista de alunos para armazenar os dados:
 
