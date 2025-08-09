@@ -7,7 +7,7 @@ class Aluno:
         self.notas = notas
 
     def aprovado(self):
-        return self.notas >= 6
+        return self.notas >= 7
     
 # aqui vamos criar a lista de alunos para armazenar os dados:
 
@@ -15,7 +15,7 @@ alunos = []
 
 # aqui vamos criar o loop para receber os dados dos alunos:
 
-for i in range(2):
+for i in range(3):
     nome = input(f"Digite o nome do aluno: ")
     notas = float(input(f"Digite a nota do aluno {nome}: "))
     aluno = Aluno(nome, notas)
