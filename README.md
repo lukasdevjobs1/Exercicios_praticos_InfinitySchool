@@ -9,7 +9,8 @@ Este repositório contém exercícios práticos de Python desenvolvidos durante 
 
 **Progresso atual**: 28% (19 de 66 aulas) - Atualmente em **Funções e Projetos**
 
-![Python Logo](https://github.com/user-attachments/assets/1a28d738-36b4-43e8-8ac4-7533edc2bf3b)
+![714077561934f5da759e2fd1d7e1b994](https://github.com/user-attachments/assets/fcefc66b-cbf5-400f-ad68-8dc612b277bd)
+
 
 ## 📊 Estatísticas do Curso
 
@@ -190,10 +191,6 @@ python Jogo_de_adivinhação.py
 
 ## 👨‍💻 Autor
 
-Desenvolvido durante o curso de Python da **Infinity School**
+Desenvolvido por mim durante o curso de Python da **Infinity School**
 
 ---
-
-⭐ **Dica**: Pratique executando os códigos e modificando-os para entender melhor os conceitos!
-
-📧 **Dúvidas?** Consulte a documentação oficial do Python ou a plataforma do curso.
