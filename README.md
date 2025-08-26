@@ -42,6 +42,19 @@ Soluções de problemas de estruturas de dados e algoritmos:
 - Implementação de busca binária
 - Otimização de algoritmos
 
+### 📝 **Atividades Extras/**
+Exercícios complementares e práticas adicionais:
+- **Atividade 1-5** - Exercícios de fixação
+- **Calculadora IMC** - Aplicação prática de cálculos
+- **Exercícios de Fixação** - Reforço de conceitos
+
+### 🎯 **Projeto Final/**
+Projeto completo desenvolvido como conclusão do curso:
+- **Sistema de Controle de Gastos CLI** - Aplicação completa
+- Gerenciamento de despesas e receitas
+- Persistência de dados em CSV
+- Interface de linha de comando interativa
+
 ## 🚀 Como Usar
 
 1. **Clone o repositório:**
@@ -71,9 +84,11 @@ Soluções de problemas de estruturas de dados e algoritmos:
 
 ## 📈 Progresso
 
-- **Aulas Concluídas:** 10+ exercícios
+- **Aulas Concluídas:** 15+ exercícios
 - **Desafios Realizados:** 4 projetos
 - **HackerRank Resolvidos:** 9 problemas
+- **Atividades Extras:** 6 exercícios
+- **Projeto Final:** Sistema completo de controle de gastos
 - **Algoritmos Implementados:** Busca binária
 
 ## 🤝 Contribuições
