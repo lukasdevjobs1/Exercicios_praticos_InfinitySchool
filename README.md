@@ -10,7 +10,9 @@
 
 ## 📚 Sobre o Repositório
 
-Este repositório contém uma coleção organizada de exercícios, desafios e projetos desenvolvidos durante o curso da **Infinity School**, além de soluções de problemas de estruturas de dados do **HackerRank**.
+Este repositório contém uma coleção organizada de exercícios, desafios e projetos desenvolvidos durante o curso **PYIA | Python IA** da **Infinity School**, além de soluções de problemas de estruturas de dados do **HackerRank**.
+
+**Progresso atual**: 33% (22 de 66 aulas) - Atualmente em **Projeto Funções**
 
 ## 🗂️ Estrutura do Projeto
 
@@ -82,9 +84,55 @@ Projeto completo desenvolvido como conclusão do curso:
 - ✅ Resolução de Problemas
 - ✅ Boas Práticas de Código
 
-## 📈 Progresso
+## 📊 Estatísticas do Curso
 
-- **Aulas Concluídas:** 15+ exercícios
+```
+📊 Progresso Geral: ████████□□□□□□□□□□□□ 33%
+
+📚 Estruturas de Dados:     ██████████ 100% (12/12 aulas)
+🔧 Funções:                ████████░░  80% (9/10 aulas)
+🖥️ Interface Gráfica:       □□□□□□□□□□   0% (0/8 aulas)
+🏗️ POO:                     □□□□□□□□□□   0% (0/14 aulas)
+🗄️ Banco de Dados:          █□□□□□□□□□   8% (1/12 aulas)
+🎯 Projeto Final:           □□□□□□□□□□   0% (0/2 aulas)
+```
+
+## 📈 Progresso Detalhado
+
+### 📚 **Estruturas de Dados** ✅
+- [x] **Aula 1**: Listas e Tuplas (4/4) ✅
+- [x] **Aula 2**: Dicionários e Sets (4/4) ✅
+- [x] **Aula 3**: Revisão lógica de programação (4/4) ✅
+
+### 🔧 **Funções e Modularização** 🔄
+- [x] **Aula 4**: Funções I (4/4) ✅
+- [x] **Aula 5**: Funções II (4/4) ✅
+- [x] **Aula 6**: Projeto Funções (1/2) 🔄 *Em andamento*
+- [ ] **Aula 7**: Módulos e Bibliotecas (0/4)
+- [ ] **Aula 8**: Revisão geral (0/4)
+
+### 🖥️ **Interface Gráfica**
+- [ ] **Aula 9**: Interface Gráfica com Flet I (0/4)
+- [ ] **Aula 10**: Interface Gráfica com Flet II (0/4)
+
+### 🏗️ **Programação Orientada a Objetos**
+- [ ] **Aula 11**: POO I (0/4)
+- [ ] **Aula 12**: POO II: Herança e Polimorfismo (0/4)
+- [ ] **Aula 13**: POO III: Associação e Encapsulamento (0/4)
+- [ ] **Aula 14**: Projeto POO e Flet (0/2)
+
+### 🗄️ **Banco de Dados**
+- [ ] **Aula 15**: SQL I (0/4)
+- [x] **Aula 16**: SQL II (1/4) 🔄 *Iniciado*
+- [ ] **Aula 17**: SQL III (0/4)
+
+### 🎯 **Projeto Final**
+- [ ] **Aula 18**: Projeto Python (0/2)
+
+## 📊 Resumo de Conquistas
+
+- **Aulas Concluídas:** 22 de 66 (33%)
+- **Módulos Completos:** Estruturas de Dados ✅
 - **Desafios Realizados:** 4 projetos
 - **HackerRank Resolvidos:** 9 problemas
 - **Atividades Extras:** 6 exercícios
