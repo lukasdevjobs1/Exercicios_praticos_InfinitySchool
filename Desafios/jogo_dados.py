@@ -15,7 +15,7 @@ def rolar_dados():
 
 def main():
     """Função principal do jogo"""
-    print("🎲 BEM-VINDO AO JOGO DE DADOS! 🎲")
+    print(" BEM-VINDO AO JOGO DE DADOS! ")
     print("Aposte no resultado da soma de dois dados (2-12)")
     
     saldo = 100
@@ -26,12 +26,12 @@ def main():
         try:
             aposta = int(input("Sua aposta (2-12): "))
             if aposta < 2 or aposta > 12:
-                print("❌ Aposta inválida! Digite um número entre 2 e 12.")
+                print(" Aposta inválida! Digite um número entre 2 e 12.")
                 continue
             
             valor_aposta = int(input("Valor da aposta: $"))
             if valor_aposta > saldo:
-                print("❌ Saldo insuficiente!")
+                print(" Saldo insuficiente!")
                 continue
             
             dado1, dado2 = rolar_dados()
@@ -42,16 +42,16 @@ def main():
             if soma == aposta:
                 ganho = valor_aposta * 5
                 saldo += ganho
-                print(f"🎉 PARABÉNS! Você ganhou ${ganho}!")
+                print(f" PARABÉNS! Você ganhou ${ganho}!")
             else:
                 saldo -= valor_aposta
-                print(f"😞 Você perdeu ${valor_aposta}")
+                print(f" Você perdeu ${valor_aposta}")
             
             if input("\nJogar novamente? (s/n): ").lower() != 's':
                 break
                 
         except ValueError:
-            print("❌ Digite apenas números!")
+            print(" Digite apenas números!")
     
     print(f"\n🎮 Jogo encerrado! Saldo final: ${saldo}")
 
