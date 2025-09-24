@@ -90,7 +90,7 @@ def listar_tarefas():
     print("="*60)
     
     for tarefa in tarefas_ordenadas:
-        status = "" if tarefa["concluida"] else "⏳"
+        status = "" if tarefa["concluida"] else ""
         prioridade_emoji = {"alta": "🔴", "media": "🟡", "baixa": "🟢"}[tarefa["prioridade"]]
         
         print(f"ID: {tarefa['id']} | {status} {tarefa['nome']}")
