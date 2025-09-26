@@ -2,8 +2,8 @@ from flask import Flask
 from config import db, DATABASE_URI 
 from controller import produto_controller
 
-app = flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'DATABASE_URI'
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
 
@@ -19,4 +19,6 @@ with app.app_context():
   db.create_all()
   
 if __name__ == "__main__":
+  import os
+  os.environ['FLASK_SKIP_DOTENV'] = '1'
   app.run(debug=True)
