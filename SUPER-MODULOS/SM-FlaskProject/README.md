@@ -121,7 +121,20 @@ A aplicação estará disponível em `http://localhost:5000`
 
 ## 🚀 Deploy
 
-Para deploy em produção, o projeto já inclui o Gunicorn:
+### Vercel (Recomendado)
+
+1. **Fork o repositório** no GitHub
+2. **Conecte ao Vercel**:
+   - Acesse [vercel.com](https://vercel.com)
+   - Importe o repositório
+   - Configure as variáveis de ambiente se necessário
+3. **Deploy automático** será feito a cada push
+
+**Nota**: O SQLite pode ter limitações no Vercel. Para produção, considere usar PostgreSQL ou MySQL.
+
+### Servidor Local/VPS
+
+Para deploy em produção com Gunicorn:
 
 ```bash
 gunicorn -w 4 -b 0.0.0.0:8000 app:app

@@ -30,5 +30,8 @@ app.add_url_rule("/api/produtos", "api_listar_produtos", produto_controller.api_
 with app.app_context():
     db.create_all()
 
+# Para Vercel
+app = app
+
 if __name__ == "__main__":
     app.run(debug=True)
