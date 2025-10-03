@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Criar Produto{% endblock %}
+
+{% block conteudo %}
+<h1>{{ titulo }}</h1>
+<form method="POST" class="mb-3" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="nameProduto" class="form-label">Nome:</label>
+    <input type="text" name="name" class="form-control" id="nameProduto" required>
+  </div>
+  <div class="mb-3">
+    <label for="precoProduto" class="form-label">Preço:</label>
+    <input type="number" name="price" step="0.01" class="form-control" id="precoProduto" required>
+  </div>
+  <div class="mb-3">
+    <label for="imgProduto" class="form-label">Imagem:</label>
+    <input type="file" name="imagem" class="form-control" id="imgProduto">
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Criar</button>
+  <a class="btn btn-secondary" href="{{ url_for('listar_produtos')}}">Voltar</a>
+</form>
+{% endblock %}

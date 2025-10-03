@@ -5,21 +5,15 @@
   <div class="jumbotron text-center">
     <h1 class="display-4">{{ titulo }}</h1>
     <p class="lead">Bem-vindo ao Gestor de Produtos!</p>
-    <hr>
+    <hr my-4>
+    <a class="btn btn-primary btn-lg" href="{{url_for('listar_produtos')}}">Ver Produtos</a>
+    <a class="btn btn-success btn-lg" href="{{url_for('cadastrar_produto')}}">Cadastrar Produto</a>
+  </div>
+  <div class="container mt-5 text-center">
+    <h2>Últimos Produtos</h2>
+    <div id="produtos-cards" class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+    </div>
   </div>
 </div>
-{% endblock %}
-
----produtos.html----
-{% extends 'base.html' %}
-
-{% block conteudo %}
-<div class="container mt-4">
-  <h1>{{ titulo }}</h1>
-  <ul>
-    {% for produto in produtos %}
-    <li>ID: {{produto.id}} - {{ produto.name }} - R$ {{ produto.preco}}</li>
-    {% endfor %}
-  </ul>
-</div>
+<script src="{{url_for('static', filename='js/produtos.js')}}"></script>
 {% endblock %}
