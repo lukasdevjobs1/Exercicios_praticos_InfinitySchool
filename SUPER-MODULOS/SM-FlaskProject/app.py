@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from config import db, DATABASE_URI
 from controllers import produto_controller
@@ -7,6 +8,8 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 # Desativa o rastreamento de modificações para economizar memória
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# Configuração para produção
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
 
 # Inicializa banco
 db.init_app(app)

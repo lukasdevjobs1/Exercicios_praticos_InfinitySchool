@@ -121,19 +121,33 @@ A aplicação estará disponível em `http://localhost:5000`
 
 ## 🚀 Deploy
 
-### Railway (Recomendado)
+### Railway (Alternativa)
 
 1. **Conecte ao Railway**:
    - Acesse [railway.app](https://railway.app)
    - Conecte seu repositório GitHub
    - Deploy automático com suporte a arquivos
 
-### Render
+### Render (Recomendado para este projeto)
 
 1. **Conecte ao Render**:
    - Acesse [render.com](https://render.com)
-   - Importe o repositório
-   - Suporte completo a Flask com upload de arquivos
+   - Faça login com GitHub
+   - Clique em "New +" → "Web Service"
+
+2. **Configure o projeto**:
+   - **Repository**: Selecione seu repositório
+   - **Root Directory**: `SUPER-MODULOS/SM-FlaskProject`
+   - **Environment**: Python 3
+   - **Build Command**: `./build.sh`
+   - **Start Command**: `gunicorn app:app`
+
+3. **Vantagens do Render**:
+   - ✅ Suporte completo a upload de arquivos
+   - ✅ SQLite funciona perfeitamente
+   - ✅ HTTPS automático
+   - ✅ Deploy automático a cada push
+   - ✅ Gratuito para projetos pessoais
 
 ### Servidor Local/VPS
 
