@@ -26,21 +26,8 @@ def cadastrar_produto():
         name = request.form["name"]
         price = float(request.form["price"])
         
-        # Recebe a imagem do formulário
-        imagem_file = request.files.get("imagem")
-        caminho_imagem = None
-        if imagem_file:
-            filename = secure_filename(imagem_file.filename)
-            caminho_imagem = f"images/{filename}"
-
-            # 🔧 Garante que a pasta static/images exista
-            os.makedirs(os.path.join("static", "images"), exist_ok=True)
-
-            # Salva a imagem na pasta static/images
-            imagem_file.save(os.path.join("static", caminho_imagem))
-
-        # Cria o produto com imagem
-        novo_produto = Produto(name=name, price=price, imagem=caminho_imagem)
+        # Cria o produto sem imagem (Vercel é read-only)
+        novo_produto = Produto(name=name, price=price, imagem=None)
         try:
             with db.session.begin():
                 db.session.add(novo_produto)
@@ -60,18 +47,6 @@ def editar_produto(id):
         if request.method == "POST":
             produto.name = request.form["name"]
             produto.price = float(request.form["price"])
-
-            # Atualiza imagem se enviar uma nova
-            imagem_file = request.files.get("imagem")
-            if imagem_file:
-                filename = secure_filename(imagem_file.filename)
-                caminho_imagem = f"images/{filename}"
-
-                # 🔧 Garante que a pasta static/images exista
-                os.makedirs(os.path.join("static", "images"), exist_ok=True)
-
-                imagem_file.save(os.path.join("static", caminho_imagem))
-                produto.imagem = caminho_imagem
 
             try:
                 with db.session.begin():
