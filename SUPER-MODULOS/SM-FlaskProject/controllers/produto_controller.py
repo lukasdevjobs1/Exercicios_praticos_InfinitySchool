@@ -52,34 +52,39 @@ def cadastrar_produto():
 
 # Editar produto
 def editar_produto(id):
-    produto = Produto.query.get(id)
-    if not produto:
-        return render_template("404.html", descErro="Produto não encontrado!")
+    try:
+        produto = Produto.query.get(id)
+        if not produto:
+            return render_template("404.html", descErro="Produto não encontrado!")
 
-    if request.method == "POST":
-        produto.name = request.form["name"]
-        produto.price = float(request.form["price"])
+        if request.method == "POST":
+            produto.name = request.form["name"]
+            produto.price = float(request.form["price"])
 
-        # Atualiza imagem se enviar uma nova
-        imagem_file = request.files.get("imagem")
-        if imagem_file:
-            filename = secure_filename(imagem_file.filename)
-            caminho_imagem = f"images/{filename}"
+            # Atualiza imagem se enviar uma nova
+            imagem_file = request.files.get("imagem")
+            if imagem_file:
+                filename = secure_filename(imagem_file.filename)
+                caminho_imagem = f"images/{filename}"
 
-            # 🔧 Garante que a pasta static/images exista
-            os.makedirs(os.path.join("static", "images"), exist_ok=True)
+                # 🔧 Garante que a pasta static/images exista
+                os.makedirs(os.path.join("static", "images"), exist_ok=True)
 
-            imagem_file.save(os.path.join("static", caminho_imagem))
-            produto.imagem = caminho_imagem
+                imagem_file.save(os.path.join("static", caminho_imagem))
+                produto.imagem = caminho_imagem
 
-        try:
-            with db.session.begin():
-                pass  # As alterações já estão no objeto
-        except Exception as e:
-            db.session.rollback()
+            try:
+                with db.session.begin():
+                    pass  # As alterações já estão no objeto
+            except Exception as e:
+                db.session.rollback()
+            return redirect(url_for("listar_produtos"))
+
+        return render_template("editar_produto.html", produto=produto)
+    except Exception as e:
+        # Em ambiente serverless, recria as tabelas se necessário
+        db.create_all()
         return redirect(url_for("listar_produtos"))
-
-    return render_template("editar_produto.html", produto=produto)
 
 # Deletar produto
 def deletar_produto(id):
