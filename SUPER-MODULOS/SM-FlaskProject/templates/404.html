@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<h1>404 - Produto Não Encontrado</h1>
+<p>O produto que você tentou acessar não existe.</p>
+<a class="btn btn-primary" href="{{ url_for('listar_produtos') }}">Voltar para Produtos</a>
+{% endblock %}
