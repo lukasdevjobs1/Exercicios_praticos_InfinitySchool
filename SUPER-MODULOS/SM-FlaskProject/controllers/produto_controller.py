@@ -126,3 +126,12 @@ def api_listar_produtos():
         for p in produtos
     ]
     return jsonify(lista)
+
+# Limpar banco de dados (apenas para desenvolvimento)
+def limpar_banco():
+    try:
+        db.drop_all()
+        db.create_all()
+        return redirect(url_for("listar_produtos"))
+    except Exception as e:
+        return redirect(url_for("listar_produtos"))
