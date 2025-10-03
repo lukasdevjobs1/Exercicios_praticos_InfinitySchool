@@ -12,8 +12,13 @@ def home():
 
 # Listar produtos
 def listar_produtos():
-    produtos = Produto.query.all()
-    return render_template("produtos.html", titulo="Lista de Produtos", produtos=produtos)
+    try:
+        produtos = Produto.query.all()
+        return render_template("produtos.html", titulo="Lista de Produtos", produtos=produtos)
+    except Exception as e:
+        # Em ambiente serverless, recria as tabelas se necessário
+        db.create_all()
+        return render_template("produtos.html", titulo="Lista de Produtos", produtos=[])
 
 # Cadastrar produto
 def cadastrar_produto():
@@ -36,8 +41,11 @@ def cadastrar_produto():
 
         # Cria o produto com imagem
         novo_produto = Produto(name=name, price=price, imagem=caminho_imagem)
-        db.session.add(novo_produto)
-        db.session.commit()
+        try:
+            with db.session.begin():
+                db.session.add(novo_produto)
+        except Exception as e:
+            db.session.rollback()
         return redirect(url_for("listar_produtos"))
 
     return render_template("criar_produto.html")
@@ -64,7 +72,11 @@ def editar_produto(id):
             imagem_file.save(os.path.join("static", caminho_imagem))
             produto.imagem = caminho_imagem
 
-        db.session.commit()
+        try:
+            with db.session.begin():
+                pass  # As alterações já estão no objeto
+        except Exception as e:
+            db.session.rollback()
         return redirect(url_for("listar_produtos"))
 
     return render_template("editar_produto.html", produto=produto)
@@ -75,8 +87,14 @@ def deletar_produto(id):
     if not produto:
         return render_template("404.html", descErro="Produto não encontrado!")
 
-    db.session.delete(produto)
-    db.session.commit()
+    try:
+        with db.session.begin():
+            db.session.delete(produto)
+    except Exception as e:
+        db.session.rollback()
+        # Em ambiente serverless, recria as tabelas se necessário
+        db.create_all()
+    
     return redirect(url_for("listar_produtos"))
 
 # Pesquisar produto por texto
