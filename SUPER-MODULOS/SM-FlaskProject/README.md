@@ -121,16 +121,19 @@ A aplicação estará disponível em `http://localhost:5000`
 
 ## 🚀 Deploy
 
-### Vercel (Recomendado)
+### Railway (Recomendado)
 
-1. **Fork o repositório** no GitHub
-2. **Conecte ao Vercel**:
-   - Acesse [vercel.com](https://vercel.com)
+1. **Conecte ao Railway**:
+   - Acesse [railway.app](https://railway.app)
+   - Conecte seu repositório GitHub
+   - Deploy automático com suporte a arquivos
+
+### Render
+
+1. **Conecte ao Render**:
+   - Acesse [render.com](https://render.com)
    - Importe o repositório
-   - Configure as variáveis de ambiente se necessário
-3. **Deploy automático** será feito a cada push
-
-**Nota**: O SQLite pode ter limitações no Vercel. Para produção, considere usar PostgreSQL ou MySQL.
+   - Suporte completo a Flask com upload de arquivos
 
 ### Servidor Local/VPS
 
@@ -139,6 +142,8 @@ Para deploy em produção com Gunicorn:
 ```bash
 gunicorn -w 4 -b 0.0.0.0:8000 app:app
 ```
+
+**Nota**: Vercel não é adequado para este projeto pois não suporta upload de arquivos.
 
 ## 🤝 Contribuição
 

@@ -12,13 +12,8 @@ def home():
 
 # Listar produtos
 def listar_produtos():
-    try:
-        produtos = Produto.query.all()
-        return render_template("produtos.html", titulo="Lista de Produtos", produtos=produtos)
-    except Exception as e:
-        # Em ambiente serverless, recria as tabelas se necessário
-        db.create_all()
-        return render_template("produtos.html", titulo="Lista de Produtos", produtos=[])
+    produtos = Produto.query.all()
+    return render_template("produtos.html", titulo="Lista de Produtos", produtos=produtos)
 
 # Cadastrar produto
 def cadastrar_produto():
@@ -26,40 +21,53 @@ def cadastrar_produto():
         name = request.form["name"]
         price = float(request.form["price"])
         
-        # Cria o produto sem imagem (Vercel é read-only)
-        novo_produto = Produto(name=name, price=price, imagem=None)
-        try:
-            with db.session.begin():
-                db.session.add(novo_produto)
-        except Exception as e:
-            db.session.rollback()
+        # Recebe a imagem do formulário
+        imagem_file = request.files.get("imagem")
+        caminho_imagem = None
+        if imagem_file:
+            filename = secure_filename(imagem_file.filename)
+            caminho_imagem = f"images/{filename}"
+
+            # 🔧 Garante que a pasta static/images exista
+            os.makedirs(os.path.join("static", "images"), exist_ok=True)
+
+            # Salva a imagem na pasta static/images
+            imagem_file.save(os.path.join("static", caminho_imagem))
+
+        # Cria o produto com imagem
+        novo_produto = Produto(name=name, price=price, imagem=caminho_imagem)
+        db.session.add(novo_produto)
+        db.session.commit()
         return redirect(url_for("listar_produtos"))
 
     return render_template("criar_produto.html")
 
 # Editar produto
 def editar_produto(id):
-    try:
-        produto = Produto.query.get(id)
-        if not produto:
-            return render_template("404.html", descErro="Produto não encontrado!")
+    produto = Produto.query.get(id)
+    if not produto:
+        return render_template("404.html", descErro="Produto não encontrado!")
 
-        if request.method == "POST":
-            produto.name = request.form["name"]
-            produto.price = float(request.form["price"])
+    if request.method == "POST":
+        produto.name = request.form["name"]
+        produto.price = float(request.form["price"])
 
-            try:
-                with db.session.begin():
-                    pass  # As alterações já estão no objeto
-            except Exception as e:
-                db.session.rollback()
-            return redirect(url_for("listar_produtos"))
+        # Atualiza imagem se enviar uma nova
+        imagem_file = request.files.get("imagem")
+        if imagem_file:
+            filename = secure_filename(imagem_file.filename)
+            caminho_imagem = f"images/{filename}"
 
-        return render_template("editar_produto.html", produto=produto)
-    except Exception as e:
-        # Em ambiente serverless, recria as tabelas se necessário
-        db.create_all()
+            # 🔧 Garante que a pasta static/images exista
+            os.makedirs(os.path.join("static", "images"), exist_ok=True)
+
+            imagem_file.save(os.path.join("static", caminho_imagem))
+            produto.imagem = caminho_imagem
+
+        db.session.commit()
         return redirect(url_for("listar_produtos"))
+
+    return render_template("editar_produto.html", produto=produto)
 
 # Deletar produto
 def deletar_produto(id):
@@ -67,14 +75,8 @@ def deletar_produto(id):
     if not produto:
         return render_template("404.html", descErro="Produto não encontrado!")
 
-    try:
-        with db.session.begin():
-            db.session.delete(produto)
-    except Exception as e:
-        db.session.rollback()
-        # Em ambiente serverless, recria as tabelas se necessário
-        db.create_all()
-    
+    db.session.delete(produto)
+    db.session.commit()
     return redirect(url_for("listar_produtos"))
 
 # Pesquisar produto por texto
@@ -102,11 +104,3 @@ def api_listar_produtos():
     ]
     return jsonify(lista)
 
-# Limpar banco de dados (apenas para desenvolvimento)
-def limpar_banco():
-    try:
-        db.drop_all()
-        db.create_all()
-        return redirect(url_for("listar_produtos"))
-    except Exception as e:
-        return redirect(url_for("listar_produtos"))

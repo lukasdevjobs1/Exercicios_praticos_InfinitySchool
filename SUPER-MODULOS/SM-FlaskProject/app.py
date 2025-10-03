@@ -26,15 +26,9 @@ app.add_url_rule("/produtos/pesquisar", "pesquisar_produto", produto_controller.
 # Rota de API
 app.add_url_rule("/api/produtos", "api_listar_produtos", produto_controller.api_listar_produtos)
 
-# Rota para limpar banco (desenvolvimento)
-app.add_url_rule("/limpar-banco", "limpar_banco", produto_controller.limpar_banco)
-
 # Cria as tabelas em falta no banco com contexto da aplicação
 with app.app_context():
     db.create_all()
-
-# Para Vercel
-app = app
 
 if __name__ == "__main__":
     app.run(debug=True)
