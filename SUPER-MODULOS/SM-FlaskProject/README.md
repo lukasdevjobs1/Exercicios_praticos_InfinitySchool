@@ -139,7 +139,7 @@ A aplicação estará disponível em `http://localhost:5000`
    - **Repository**: Selecione seu repositório
    - **Root Directory**: `SUPER-MODULOS/SM-FlaskProject`
    - **Environment**: Python 3
-   - **Build Command**: `./build.sh`
+   - **Build Command**: `pip install -r requirements.txt`
    - **Start Command**: `gunicorn app:app`
 
 3. **Vantagens do Render**:
