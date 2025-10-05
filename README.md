@@ -12,7 +12,7 @@
 
 Este repositório contém uma coleção organizada de exercícios, desafios e projetos desenvolvidos durante o curso **PYIA | Python IA** da **Infinity School**, além de soluções de problemas de estruturas de dados do **HackerRank**.
 
-**Progresso atual**: 33% (22 de 66 aulas) - Atualmente em **Projeto Funções**
+**Progresso atual**: 50% (33 de 66 aulas) - Atualmente em **Interface Gráfica com Flet**
 
 ## 🗂️ Estrutura do Projeto
 
@@ -94,11 +94,11 @@ Sistema CLI para gerenciar tarefas com prioridades e categorias:
 ## 📊 Estatísticas do Curso
 
 ```
-📊 Progresso Geral: ████████□□□□□□□□□□□□ 33%
+📊 Progresso Geral: ████████████□□□□□□□□ 50%
 
 📚 Estruturas de Dados:     ██████████ 100% (12/12 aulas)
-🔧 Funções:                ████████░░  80% (9/10 aulas)
-🖥️ Interface Gráfica:       □□□□□□□□□□   0% (0/8 aulas)
+🔧 Funções:                ██████████ 100% (10/10 aulas)
+🖥️ Interface Gráfica:       ██░░░░░░░░  25% (2/8 aulas)
 🏗️ POO:                     □□□□□□□□□□   0% (0/14 aulas)
 🗄️ Banco de Dados:          █□□□□□□□□□   8% (1/12 aulas)
 🎯 Projeto Final:           □□□□□□□□□□   0% (0/2 aulas)
@@ -111,15 +111,15 @@ Sistema CLI para gerenciar tarefas com prioridades e categorias:
 - [x] **Aula 2**: Dicionários e Sets (4/4) ✅
 - [x] **Aula 3**: Revisão lógica de programação (4/4) ✅
 
-### 🔧 **Funções e Modularização** 🔄
+### 🔧 **Funções e Modularização** ✅
 - [x] **Aula 4**: Funções I (4/4) ✅
 - [x] **Aula 5**: Funções II (4/4) ✅
 - [x] **Aula 6**: Projeto Funções - Sistema de Tarefas (2/2) ✅
-- [ ] **Aula 7**: Módulos e Bibliotecas (0/4)
-- [ ] **Aula 8**: Revisão geral (0/4)
+- [x] **Aula 7**: Módulos e Bibliotecas (4/4) ✅
+- [x] **Aula 8**: Revisão geral (4/4) ✅
 
-### 🖥️ **Interface Gráfica**
-- [ ] **Aula 9**: Interface Gráfica com Flet I (0/4)
+### 🖥️ **Interface Gráfica** 🔄
+- [x] **Aula 9**: Interface Gráfica com Flet I (2/4) 🔄 *Em andamento*
 - [ ] **Aula 10**: Interface Gráfica com Flet II (0/4)
 
 ### 🏗️ **Programação Orientada a Objetos**
@@ -138,8 +138,8 @@ Sistema CLI para gerenciar tarefas com prioridades e categorias:
 
 ## 📊 Resumo de Conquistas
 
-- **Aulas Concluídas:** 24 de 66 (36%)
-- **Módulos Completos:** Estruturas de Dados ✅
+- **Aulas Concluídas:** 33 de 66 (50%)
+- **Módulos Completos:** Estruturas de Dados ✅, Funções ✅
 - **Desafios Realizados:** 5 projetos
 - **HackerRank Resolvidos:** 9 problemas
 - **Atividades Extras:** 6 exercícios
