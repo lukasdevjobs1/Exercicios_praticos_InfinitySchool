@@ -83,11 +83,11 @@ Verifique o caminho de saída do compilador (outDir/rootDir) caso o arquivo gera
 
 ## Autor
 
-Desenvolvido por [Lukas Gomes].
+Desenvolvido por [Lukas Gomes - https://github.com/lukasdevjobs1].
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+Este projeto está licenciado sob a Licença MIT. 
 
 ## Agradecimentos
 
