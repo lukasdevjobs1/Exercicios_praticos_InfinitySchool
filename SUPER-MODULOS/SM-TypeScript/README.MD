@@ -1,5 +1,6 @@
 # SM-TypeScript — Super Módulo de TypeScript
 
+
 ## Resumo
 
 Coleção de exercícios práticos e notas para aprender os conceitos fundamentais do TypeScript e como integrá‑lo a um front-end simples.
@@ -52,8 +53,10 @@ function somar(n1: number, n2: number): number {
 
 Requisitos:
 
-Node.js
-VS Code (recomendado)
+Node.js - https://nodejs.org/pt
+
+
+VS Code (recomendado) - https://code.visualstudio.com/
 
 # Comandos úteis:
 
@@ -83,11 +86,11 @@ Verifique o caminho de saída do compilador (outDir/rootDir) caso o arquivo gera
 
 ## Autor
 
-Desenvolvido por [Lukas Gomes].
+Desenvolvido por [Lukas Gomes - https://github.com/lukasdevjobs1
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+Este projeto está licenciado sob a Licença MIT. 
 
 ## Agradecimentos
 
