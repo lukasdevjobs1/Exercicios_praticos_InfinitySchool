@@ -83,7 +83,7 @@ Verifique o caminho de saída do compilador (outDir/rootDir) caso o arquivo gera
 
 ## Autor
 
-Desenvolvido por [Lukas Gomes - https://github.com/lukasdevjobs1].
+Desenvolvido por [Lukas Gomes - https://github.com/lukasdevjobs1
 
 ## Licença
 
