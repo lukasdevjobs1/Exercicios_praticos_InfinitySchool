@@ -179,4 +179,4 @@ Sistema CLI para gerenciar tarefas com prioridades e categorias:
 
 **🎓 Instituição:** Infinity School
 **📅 Última Atualização:** Outubro 2025
->>>>>>> 26014c3eecf0933e380b027b481a1ad7e5425808
+
