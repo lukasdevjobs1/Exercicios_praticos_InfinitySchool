@@ -1,5 +1,10 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
+  "include": [
+    "src/**/*",
+    "Intro/**/*",
+    "index.ts"
+  ],
   "compilerOptions": {
     // File Layout
     "rootDir": "./src",
