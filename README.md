@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+# Sistema de Gerenciamento de Produtos
+
+Sistema simples para gerenciar produtos com banco de dados SQLite.
+
+## Funcionalidades
+- Adicionar produtos
+- Listar produtos
+- Buscar produtos por código
+- Deletar produtos
+- Alterar produtos
+- Gerenciar estoque
+- Ativar/desativar produtos
+
+## Como usar
+```bash
+python sistema_gerenciamento_produtos.py
+```
+
+## Requisitos
+- Python 3.x
+- SQLite3 (incluído no Python)
+
+## Banco de dados
+O arquivo `produtos.db` é criado automaticamente na primeira execução.
+=======
 # 🐍 Exercícios Python - Infinity School
 
 > **Repositório de estudos em Lógica de Programação e Estruturas de Dados**
@@ -179,3 +205,4 @@ Sistema CLI para gerenciar tarefas com prioridades e categorias:
 
 **🎓 Instituição:** Infinity School
 **📅 Última Atualização:** Outubro 2025
+>>>>>>> 26014c3eecf0933e380b027b481a1ad7e5425808

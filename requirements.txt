@@ -1,5 +1,0 @@
-# Dependências do projeto (nenhuma externa necessária)
-# O projeto usa apenas bibliotecas padrão do Python:
-# - json (para persistência de dados)
-# - os (para operações de arquivo)
-# - datetime (para timestamps)
