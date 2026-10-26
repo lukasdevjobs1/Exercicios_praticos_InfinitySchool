@@ -4,7 +4,8 @@
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![HackerRank](https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-success?style=for-the-badge)
+![Certificado](https://img.shields.io/badge/Certificado-Internacional-D4AF37?style=for-the-badge)
 
 ![image](https://github.com/user-attachments/assets/1a28d738-36b4-43e8-8ac4-7533edc2bf3b)
 
@@ -12,7 +13,15 @@
 
 Este repositório contém uma coleção organizada de exercícios, desafios e projetos desenvolvidos durante o curso **PYIA | Python IA** da **Infinity School**, além de soluções de problemas de estruturas de dados do **HackerRank**.
 
-**Progresso atual**: 84% (56 de 66 aulas) - Atualmente em **SQL I**
+**✅ Curso concluído: 100%**, com certificado internacional **Full Stack Programming IA**.
+
+## 🎓 Certificado
+
+Certificado internacional emitido pela **Infinity School**, escola parceira **Microsoft** e **Google**, pela conclusão do curso **Full Stack Programming IA**: programação e desenvolvimento de apps, sites e programas.
+
+<p align="center">
+  <img src="certificado/certificado-infinity-school.jpg" alt="International Certificate da Infinity School: Lukas Albertino Gomes concluiu o curso Full Stack Programming IA" width="480">
+</p>
 
 ## 🗂️ Estrutura do Projeto
 
@@ -109,13 +118,13 @@ Sistema CLI para gerenciar tarefas com prioridades e categorias:
 ## 📊 Estatísticas do Curso
 
 ```
-📊 Progresso Geral: ██████████████░░ 84%
+📊 Progresso Geral: ████████████████ 100% ✅ Concluído
 
 📚 Estruturas de Dados:     ██████████ 100% (12/12 aulas)
 🔧 Funções:                ██████████ 100% (10/10 aulas)
 🖥️ Interface Gráfica:       ██████████ 100% (8/8 aulas)
-🏗️ POO:                     ████████░░  80% (11/14 aulas)
-🗄️ Banco de Dados:          ██████░░░░  60% (7/12 aulas)
+🏗️ POO:                     ██████████ 100% (14/14 aulas)
+🗄️ Banco de Dados:          ██████████ 100% (12/12 aulas)
 🎯 Projeto Final:           ██████████ 100% (2/2 aulas)
 ```
 
@@ -140,20 +149,20 @@ Sistema CLI para gerenciar tarefas com prioridades e categorias:
 - [x] **Aula 9**: Interface Gráfica com Flet I (4/4) ✅
 - [x] **Aula 10**: Interface Gráfica com Flet II (4/4) ✅
 
-### 🏗️ **Programação Orientada a Objetos**
+### 🏗️ **Programação Orientada a Objetos** ✅
 
 - [x] **Aula 11**: POO I (4/4) ✅
-- [x] **Aula 12**: POO II: Herança e Polimorfismo (3/4) 🔄
-- [x] **Aula 13**: POO III: Associação e Encapsulamento (1/4) 🔄
+- [x] **Aula 12**: POO II: Herança e Polimorfismo (4/4) ✅
+- [x] **Aula 13**: POO III: Associação e Encapsulamento (4/4) ✅
 - [x] **Aula 14**: Projeto POO e Flet (2/2) ✅
 
-### 🗄️ **Banco de Dados**
+### 🗄️ **Banco de Dados** ✅
 
-- [ ] **Aula 15**: SQL I (1/4) 🔄
-- [ ] **Aula 16**: SQL II (1/4) 🔄
+- [x] **Aula 15**: SQL I (4/4) ✅
+- [x] **Aula 16**: SQL II (4/4) ✅
 - [x] **Aula 17**: SQL III (4/4) ✅
 
-### 🎯 **Projeto Final**
+### 🎯 **Projeto Final** ✅
 
 - [x] **Aula 18**: Projeto Python (2/2) ✅
 
@@ -161,7 +170,8 @@ Sistema CLI para gerenciar tarefas com prioridades e categorias:
 
 ### Repositórios Principais:
 
-- [Profile-chat](https://github.com/lukasdevjobs1/profile-chat) - ChatBot AI pessoal
+- [Portfólio](https://lukasdevjobs1.github.io/profile-chat/) - Projetos, tecnologias e assistente de IA
+- [Profile-chat](https://github.com/lukasdevjobs1/profile-chat) - Código do portfólio
 - [Git_Projects](https://github.com/lukasdevjobs1/Git_Projects) - Portfólio técnico
 - [Exercicios_praticos_InfinitySchool](https://github.com/lukasdevjobs1/Exercicios_praticos_InfinitySchool) - Este repositório
 
@@ -177,6 +187,6 @@ Sistema CLI para gerenciar tarefas com prioridades e categorias:
 - LinkedIn: [Lukas Gomes](https://www.linkedin.com/in/lukas-gomes-4470a2269/)
 - WhatsApp: [+55 85 99257-0216](https://wa.me/5585992570216)
 
-**🎓 Instituição:** Infinity School
-**📅 Última Atualização:** Outubro 2025
+**🎓 Instituição:** Infinity School · Curso concluído com certificado internacional
+**📅 Última Atualização:** Outubro 2026
 
